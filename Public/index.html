@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>FreeWebsiteToApk — HTML to APK Converter</title>
+<style>
+:root{--ink:#172033;--muted:#718096;--line:#e8edf4;--purple:#6558e8;--pale:#f5f4ff;--green:#159b72}
+*{box-sizing:border-box}body{margin:0;background:#f7f9fc;color:var(--ink);font:15px Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{height:74px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5%,calc((100% - 1180px)/2));position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;letter-spacing:-.5px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(140deg,#7568f5,#5142ce);display:grid;place-items:center;color:white;font-size:19px;box-shadow:0 7px 18px #6558e833}
+.brand small{display:block;color:#8b93a5;font-size:10px;letter-spacing:1.5px;font-weight:700;margin-top:2px}
+.header-tag{font-size:12px;color:var(--green);background:#eaf8f2;padding:8px 12px;border-radius:30px;font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:54px 22px 70px}.hero{text-align:center;margin-bottom:36px}.eyebrow{display:inline-flex;gap:7px;align-items:center;color:var(--purple);background:var(--pale);border:1px solid #e7e4ff;border-radius:30px;padding:7px 12px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(30px,5vw,48px);letter-spacing:-1.8px;margin:17px 0 10px}.hero h1 span{color:var(--purple)}.hero p{color:var(--muted);max-width:620px;margin:0 auto;line-height:1.7}
+.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.8fr);gap:22px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 30px #1b2b4b08}.panel h2{font-size:18px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 22px}.field{margin:17px 0}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:8px}.field input,.field textarea{width:100%;border:1px solid #dfe5ef;border-radius:10px;padding:12px 13px;font:14px inherit;color:var(--ink);outline:none;background:#fff}.field input:focus,.field textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px #6558e815}.field textarea{height:220px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.6}.two{display:grid;grid-template-columns:1fr 1fr;gap:13px}.hint{font-size:11px;color:#8993a5;margin-top:6px}.btn{border:0;border-radius:11px;padding:13px 17px;font-weight:800;cursor:pointer;font-size:14px}.primary{background:var(--purple);color:#fff;box-shadow:0 8px 18px #6558e82b}.primary:disabled{opacity:.55;cursor:wait}.secondary{background:#f1f3f8;color:#44506a}.full{width:100%}.status{display:none;margin-top:14px;border-radius:10px;padding:12px;font-size:13px;line-height:1.5}.status.show{display:block}.status.error{background:#fff0f0;color:#b42318}.status.info{background:#f1f0ff;color:#5145c8}.status.ok{background:#eaf8f2;color:#137653}.side-card{padding:19px;border:1px solid var(--line);border-radius:14px;margin-top:13px}.side-card:first-of-type{margin-top:20px}.step{display:flex;gap:12px;margin:15px 0}.num{flex:0 0 28px;height:28px;border-radius:9px;background:var(--pale);color:var(--purple);display:grid;place-items:center;font-weight:800;font-size:12px}.step b{font-size:13px}.step p{font-size:12px;color:var(--muted);margin:4px 0 0;line-height:1.5}.note{font-size:12px;line-height:1.6;color:#657086;background:#f8f9fc;border-radius:12px;padding:13px;margin-top:17px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:22px}.feature{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}.feature strong{display:block;font-size:13px;margin:8px 0 4px}.feature p{font-size:11px;color:var(--muted);margin:0;line-height:1.5}.ico{font-size:19px}footer{text-align:center;color:#98a1b1;font-size:12px;padding:25px;border-top:1px solid var(--line);background:#fff}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}main{padding-top:35px}}@media(max-width:480px){header{padding:0 16px}.header-tag{font-size:10px}.panel{padding:18px}.two{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">↗</div><div>FreeWebsiteToApk<small>BY KHARAL MODS</small></div></div><div class="header-tag">● BUILDER PLATFORM</div></header>
+<main>
+<section class="hero"><div class="eyebrow">✦ SIMPLE · FAST · ANDROID</div><h1>Turn your <span>Website into an App</span></h1><p>Convert your HTML project into an Android application. Add your app details, start the build, and download your APK.</p></section>
+<div class="layout">
+<section class="panel">
+<h2>Configure your Android app</h2><p class="sub">Enter your website code and application details below.</p>
+<form id="buildForm">
+<div class="field"><label for="html">HTML source code</label><textarea id="html" required placeholder="<!doctype html>&#10;<html>&#10;  <head><title>My App</title></head>&#10;  <body><h1>Hello World</h1></body>&#10;</html>"></textarea><div class="hint">Paste a complete HTML document. Maximum 2 MB.</div></div>
+<div class="two">
+<div class="field"><label for="appName">Application name</label><input id="appName" maxlength="40" value="My Website App" required></div>
+<div class="field"><label for="version">Version</label><input id="version" maxlength="20" value="1.0.0"></div>
+</div>
+<div class="field"><label for="packageName">Package name</label><input id="packageName" value="com.kharalmods.myapp" required><div class="hint">Example: com.company.application</div></div>
+<button class="btn primary full" id="buildBtn" type="submit">⚡ Generate Android APK</button>
+<div class="status" id="status" role="status"></div>
+</form>
+</section>
+<aside class="panel">
+<h2>How it works</h2><p class="sub">Three simple steps to your Android app.</p>
+<div class="side-card">
+<div class="step"><div class="num">01</div><div><b>Add your website</b><p>Paste your HTML source code into the editor.</p></div></div>
+<div class="step"><div class="num">02</div><div><b>Set app information</b><p>Choose an app name, version and unique package ID.</p></div></div>
+<div class="step"><div class="num">03</div><div><b>Build and download</b><p>The Vercel API forwards your project to the connected Android build server.</p></div></div>
+</div>
+<div class="note"><b>Build server requirement</b><br>Vercel hosts this website. Real APK generation also needs a separate server with Node.js, Java JDK, Android SDK and Gradle. Connect it with the APK_BUILDER_URL environment variable.</div>
+</aside>
+</div>
+<div class="features">
+<div class="feature"><div class="ico">📱</div><strong>Android APK</strong><p>Build a native Android WebView container.</p></div>
+<div class="feature"><div class="ico">🛡️</div><strong>App identity</strong><p>Set a unique package name and version.</p></div>
+<div class="feature"><div class="ico">⚙️</div><strong>Build workflow</strong><p>Send the project to your configured build server.</p></div>
+</div>
+</main>
+<footer>© 2026 FreeWebsiteToApk · Created by Kharal Mods</footer>
+<script>
+const form=document.getElementById('buildForm'),btn=document.getElementById('buildBtn'),statusBox=document.getElementById('status');
+function showStatus(message,type){statusBox.textContent=message;statusBox.className='status show '+type;}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();const payload={html:document.getElementById('html').value,appName:document.getElementById('appName').value,version:document.getElementById('version').value,packageName:document.getElementById('packageName').value};
+ btn.disabled=true;btn.textContent='Building APK…';showStatus('Submitting your project to the Android build server. Large builds may take several minutes.','info');
+ try{
+  const response=await fetch('/api/build',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  if(!response.ok){let msg='Build failed.';try{msg=(await response.json()).error||msg}catch{}throw new Error(msg)}
+  const blob=await response.blob(),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=(payload.appName.replace(/[^a-z0-9-_]/gi,'_')||'app')+'-debug.apk';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);showStatus('APK build completed. Your download should begin now.','ok');
+ }catch(err){showStatus(err.message,'error')}finally{btn.disabled=false;btn.textContent='⚡ Generate Android APK'}
+});
+</script>
+</body></html>
