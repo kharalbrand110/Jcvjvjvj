@@ -1,0 +1,15 @@
+module.exports = async function handler(req, res) {
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  const configured = Boolean(process.env.APK_BUILDER_URL);
+  return res.status(200).json({
+    ok: true,
+    hosting: "Vercel",
+    builderConfigured: configured,
+    message: configured
+      ? "Vercel frontend is connected to the APK build server."
+      : "Website is online. Add APK_BUILDER_URL in Vercel Environment Variables to connect your separate Android build server."
+  });
+};
