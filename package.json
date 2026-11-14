@@ -1,0 +1,15 @@
+{
+  "name": "freewebsitetopk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FreeWebsiteToApk - real HTML to Android APK builder starter",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
